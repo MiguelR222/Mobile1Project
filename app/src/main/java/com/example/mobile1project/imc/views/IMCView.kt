@@ -1,4 +1,4 @@
-package com.example.mobile1project.sum.views
+package com.example.mobile1project.imc.views
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -9,19 +9,20 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.platform.LocalContext
 import com.example.mobile1project.R
-import com.example.mobile1project.sum.viewmodels.SumViewModel
+import com.example.mobile1project.imc.viewmodels.IMCViewModel
 
 @Composable
-fun SumView(viewModel: SumViewModel = viewModel()) {
+fun IMCView(viewModel: IMCViewModel = viewModel()) {
     val context = LocalContext.current
-    var num1 by remember { mutableStateOf("") }
-    var num2 by remember { mutableStateOf("") }
-    val result by viewModel.result
+    var weight by remember { mutableStateOf("") }
+    var height by remember { mutableStateOf("") }
+    val imc by viewModel.imc
+    val status by viewModel.status
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -29,33 +30,33 @@ fun SumView(viewModel: SumViewModel = viewModel()) {
         verticalArrangement = Arrangement.Center
     ) {
         TextField(
-            value = num1,
-            onValueChange = { num1 = it },
-            label = { Text(context.getString(R.string.enter_first_number)) },
+            value = weight,
+            onValueChange = { weight = it },
+            label = { Text(text = context.getString(R.string.enter_weight)) },
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
             singleLine = true
         )
         Spacer(modifier = Modifier.height(8.dp))
         TextField(
-            value = num2,
-            onValueChange = { num2 = it },
-            label = { Text(context.getString(R.string.enter_second_number)) },
+            value = height,
+            onValueChange = { height = it },
+            label = { Text(text = context.getString(R.string.enter_height)) },
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
             singleLine = true
         )
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             onClick = {
-                val num1Int = num1.toIntOrNull()
-                val num2Int = num2.toIntOrNull()
+                val weightFloat = weight.toFloatOrNull()
+                val heightFloat = height.toFloatOrNull()
 
-                if (num1Int != null && num2Int != null) {
-                    viewModel.calculateSum(num1Int, num2Int)
+                if (weightFloat != null && heightFloat != null && heightFloat > 0) {
+                    viewModel.calculateIMC(weightFloat, heightFloat, context::getString)
                 }
             },
-            enabled = num1.isNotEmpty() && num2.isNotEmpty()
+            enabled = weight.isNotEmpty() && height.isNotEmpty()
         ) {
-            Text(context.getString(R.string.calculate))
+            Text(text = context.getString(R.string.calculate))
         }
         Spacer(modifier = Modifier.height(16.dp))
         Box(
@@ -64,11 +65,18 @@ fun SumView(viewModel: SumViewModel = viewModel()) {
                 .background(Color.LightGray),
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = result.toString(),
-                fontSize = 24.sp,
-                color = Color.Black
-            )
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = String.format("%.2f", imc),
+                    fontSize = 24.sp,
+                    color = Color.Black
+                )
+                Text(
+                    text = status,
+                    fontSize = 16.sp,
+                    color = Color.Black
+                )
+            }
         }
     }
 }

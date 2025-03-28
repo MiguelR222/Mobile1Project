@@ -5,4 +5,11 @@
         <string name="email_label">Correo Electronico</string>
         <string name="password_label">Contraseña</string>
         <string name="login_button">Iniciar Sesión</string>
+        <string name="enter_weight">Ingrese su peso (kg)</string>
+        <string name="enter_height">Ingrese su altura (m)</string>
+        <string name="calculate">Calcular</string>
+        <string name="status_ok">El paciente se encuentra en el peso adecuado</string>
+        <string name="status_not_ok">El paciente NO se encuentra en el peso adecuado</string>
+        <string name="enter_first_number">Ingrese el primer número</string>
+        <string name="enter_second_number">Ingrese el segundo número</string>
     </resources>
