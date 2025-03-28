@@ -4,4 +4,11 @@
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>
     <string name="login_button">Log In</string>
+    <string name="enter_weight">Enter your weight (kg)</string>
+    <string name="enter_height">Enter your height (m)</string>
+    <string name="calculate">Calculate</string>
+    <string name="status_ok">The patient is at an adequate weight</string>
+    <string name="status_not_ok">The patient is NOT at an adequate weight</string>
+    <string name="enter_first_number">Enter first number</string>
+    <string name="enter_second_number">Enter second number</string>
 </resources>
