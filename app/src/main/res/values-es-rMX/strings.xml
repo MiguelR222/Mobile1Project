@@ -12,4 +12,7 @@
         <string name="status_not_ok">El paciente NO se encuentra en el peso adecuado</string>
         <string name="enter_first_number">Ingrese el primer número</string>
         <string name="enter_second_number">Ingrese el segundo número</string>
+        <string name="temp_input">Ingrese Su Temperatura en Celcius</string>
+        <string name="temp_convert">Convierta su temperatura de °C a °F</string>
+        <string name="temp_image_desc">Imagen de Termometro</string>
     </resources>

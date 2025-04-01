@@ -11,4 +11,7 @@
     <string name="status_not_ok">The patient is NOT at an adequate weight</string>
     <string name="enter_first_number">Enter first number</string>
     <string name="enter_second_number">Enter second number</string>
+    <string name="temp_input">Enter Your Temperature in Celcius</string>
+    <string name="temp_convert">Convert your temperature from °C to °F</string>
+    <string name="temp_image_desc">Thermometer Image</string>
 </resources>
