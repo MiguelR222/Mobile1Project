@@ -14,4 +14,15 @@
     <string name="temp_input">Enter Your Temperature in Celcius</string>
     <string name="temp_convert">Convert your temperature from °C to °F</string>
     <string name="temp_image_desc">Thermometer Image</string>
+    <string name="go_to">Go To</string>
+    <string name="first_partial">First Partial</string>
+    <string name="second_partial">Second Partial</string>
+    <string name="third_partial">Third Partial</string>
+    <string name="calculator">Calculator</string>
+    <string name="home">Home</string>
+    <string name="partial_1">Partial 1</string>
+    <string name="partial_2">Partial 2</string>
+    <string name="partial_3">Partial 3</string>
+    <string name="bmi">BMI</string>
+    <string name="temperature">Temperature</string>
 </resources>

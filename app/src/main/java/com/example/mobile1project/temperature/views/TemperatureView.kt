@@ -85,4 +85,3 @@ fun TemperatureView(viewModel: TemperatureViewModel = viewModel()) {
         }
     }
 }
-

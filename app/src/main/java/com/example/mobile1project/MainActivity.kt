@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.mobile1project.imc.views.IMCView
 import com.example.mobile1project.login.views.LoginView
+import com.example.mobile1project.navigation.TabBarNavigationView
 import com.example.mobile1project.sum.views.SumView
 import com.example.mobile1project.temperature.views.TemperatureView
 import com.example.mobile1project.ui.theme.Mobile1ProjectTheme
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Mobile1ProjectTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TemperatureView()
+                    TabBarNavigationView()
                 }
             }
         }

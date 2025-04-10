@@ -15,4 +15,15 @@
         <string name="temp_input">Ingrese Su Temperatura en Celcius</string>
         <string name="temp_convert">Convierta su temperatura de °C a °F</string>
         <string name="temp_image_desc">Imagen de Termometro</string>
+        <string name="go_to">Ir A</string>
+        <string name="first_partial">Primer Parcial</string>
+        <string name="second_partial">Segundo Parcial</string>
+        <string name="third_partial">Tercer Parcial</string>
+        <string name="calculator">Calculadora</string>
+        <string name="home">Inicio</string>
+        <string name="partial_1">Parcial 1</string>
+        <string name="partial_2">Parcial 2</string>
+        <string name="partial_3">Parcial 3</string>
+        <string name="bmi">IMC</string>
+        <string name="temperature">Temperatura</string>
     </resources>
