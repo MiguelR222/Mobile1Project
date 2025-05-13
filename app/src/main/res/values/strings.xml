@@ -25,4 +25,5 @@
     <string name="partial_3">Partial 3</string>
     <string name="bmi">BMI</string>
     <string name="temperature">Temperature</string>
+    <string name="student_list">Student List</string>
 </resources>
