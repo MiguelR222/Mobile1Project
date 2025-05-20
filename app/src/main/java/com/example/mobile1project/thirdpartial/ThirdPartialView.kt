@@ -37,5 +37,23 @@ fun ThirdPartialView(navController: NavController) {
             Spacer(modifier = Modifier.size(8.dp))
             Text("${stringResource(R.string.go_to)} ${stringResource(id = ScreenNavigation.StudentList.label)}")
         }
+        Button(
+            onClick = { navController.navigate(ScreenNavigation.Location.route) },
+            modifier = Modifier.fillMaxWidth()
+
+        ) {
+            Icon(imageVector = ScreenNavigation.Location.icon, contentDescription = stringResource(id = ScreenNavigation.Location.label) )
+            Spacer(modifier = Modifier.size(8.dp))
+            Text("${stringResource(R.string.go_to)} ${stringResource(id = ScreenNavigation.Location.label)}")
+        }
+        Button(
+            onClick = { navController.navigate(ScreenNavigation.StudentListApi.route) },
+            modifier = Modifier.fillMaxWidth()
+
+        ) {
+            Icon(imageVector = ScreenNavigation.StudentListApi.icon, contentDescription = stringResource(id = ScreenNavigation.StudentListApi.label) )
+            Spacer(modifier = Modifier.size(8.dp))
+            Text("${stringResource(R.string.go_to)} ${stringResource(id = ScreenNavigation.StudentListApi.label)}")
+        }
     }
 }
