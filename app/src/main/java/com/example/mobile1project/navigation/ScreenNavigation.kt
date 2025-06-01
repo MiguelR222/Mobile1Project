@@ -16,4 +16,6 @@ sealed class ScreenNavigation(val route: String, @StringRes val label: Int, val 
     object Sum : ScreenNavigation("SumRoute", R.string.calculator, Icons.Default.Calculate)
     object Temperature : ScreenNavigation("TemperatureRoute", R.string.temperature, Icons.Default.Thermostat)
     object StudentList : ScreenNavigation("StudentListRoute", R.string.student_list, Icons.Default.List)
+    object StudentListApi : ScreenNavigation("StudentListApiRoute", R.string.student_list_api, Icons.Default.School)
+    object Location : ScreenNavigation("LocationRoute", R.string.location, Icons.Default.SportsBaseball )
 }

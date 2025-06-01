@@ -26,5 +26,10 @@
         <string name="partial_3">Parcial 3</string>
         <string name="bmi">IMC</string>
         <string name="temperature">Temperatura</string>
-        <string name="student_list">Lista de Estudiantes</string>
+        <string name="student_list">Lista de Estudiantes Hardcoded</string>
+        <string name="student_list_api">Mostrar estudiantes</string>
+        <string name="location">Localizacion</string>
+        <string name="name">Nombre</string>
+        <string name="student_id">Matrícula</string>
+        <string name="quote">Frase</string>
     </resources>

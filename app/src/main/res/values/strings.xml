@@ -25,5 +25,10 @@
     <string name="partial_3">Partial 3</string>
     <string name="bmi">BMI</string>
     <string name="temperature">Temperature</string>
-    <string name="student_list">Student List</string>
+    <string name="student_list">Student List Hardcoded</string>
+    <string name="student_list_api">Show Students</string>
+    <string name="location">Location</string>
+    <string name="name">Name</string>
+    <string name="student_id">StudentId</string>
+    <string name="quote">Quote</string>
 </resources>

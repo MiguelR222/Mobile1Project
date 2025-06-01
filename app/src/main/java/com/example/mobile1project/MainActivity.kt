@@ -19,6 +19,7 @@ import com.example.mobile1project.login.views.LoginView
 import com.example.mobile1project.navigation.TabBarNavigationView
 import com.example.mobile1project.sum.views.SumView
 import com.example.mobile1project.temperature.views.TemperatureView
+import com.example.mobile1project.thirdpartialexam.view.StudentListView
 import com.example.mobile1project.ui.theme.Mobile1ProjectTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,7 +28,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Mobile1ProjectTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
-                    LocationListScreen()
+                    TabBarNavigationView()
                 }
             }
         }
