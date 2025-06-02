@@ -12,10 +12,13 @@ sealed class ScreenNavigation(val route: String, @StringRes val label: Int, val 
     object FirstPartial : ScreenNavigation("FirstPartialRoute",R.string.partial_1, Icons.Default.LooksOne)
     object SecondPartial : ScreenNavigation("SecondPartialRoute",R.string.partial_2, Icons.Default.LooksTwo)
     object ThirdPartial : ScreenNavigation("ThirdPartialRoute", R.string.partial_3, Icons.Default.Looks3)
+    object Final : ScreenNavigation("FinalRoute", R.string.final_exam, Icons.Default.Recommend)
     object IMC : ScreenNavigation("ImcRoute", R.string.bmi , Icons.Default.Scale)
     object Sum : ScreenNavigation("SumRoute", R.string.calculator, Icons.Default.Calculate)
     object Temperature : ScreenNavigation("TemperatureRoute", R.string.temperature, Icons.Default.Thermostat)
     object StudentList : ScreenNavigation("StudentListRoute", R.string.student_list, Icons.Default.List)
     object StudentListApi : ScreenNavigation("StudentListApiRoute", R.string.student_list_api, Icons.Default.School)
     object Location : ScreenNavigation("LocationRoute", R.string.location, Icons.Default.SportsBaseball )
+    object RestaurantList : ScreenNavigation("RestaurantList", R.string.restaurant_list, Icons.Default.FoodBank )
+    object RestaurantDetail : ScreenNavigation("RestaurantDetail", R.string.restaurant_list, Icons.Default.FoodBank)
 }
