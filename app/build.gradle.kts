@@ -1,7 +1,10 @@
+import org.jetbrains.kotlin.konan.properties.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -16,6 +19,16 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        val localProperties = Properties()
+        val localPropertiesFile = rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            localProperties.load(localPropertiesFile.inputStream())
+            val apiKey = localProperties.getProperty("MAPS_API_KEY")
+                ?: throw GradleException("MAPS_API_KEY not found in local.properties")
+            manifestPlaceholders["MAPS_API_KEY"] = apiKey
+        } else {
+            throw GradleException("local.properties file not found")
+        }
     }
 
     buildTypes {
@@ -65,5 +78,7 @@ dependencies {
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.6.4")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
-    // Commit prueba gradle
+
+    implementation("com.google.maps.android:maps-compose:2.11.4")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
 }

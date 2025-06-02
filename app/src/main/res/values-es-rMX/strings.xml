@@ -32,4 +32,10 @@
         <string name="name">Nombre</string>
         <string name="student_id">Matrícula</string>
         <string name="quote">Frase</string>
+        <string name="restaurant_list">Lista de Restaurantes</string>
+        <string name="final_exam">Examen Final</string>
+        <string name="fee">Costo de Entrega</string>
+        <string name="call">Llamar</string>
+        <string name="visit_site">Visitar Sitio</string>
+        <string name="delivery">Tiempo de Entrega</string>
     </resources>
